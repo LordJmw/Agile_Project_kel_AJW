@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 w-screen h-screen flex flex-col items-center bg-gradient-to-r from-blue-400 to-green-400">
+
+    <header class="w-full">
+        <nav class="w-full bg-green-600 flex justify-between items-center p-4 md:p-6 shadow-lg">
+            <p class="text-white text-lg font-bold">AJW Group</p>
+            <a href="index.html" class="hover:bg-gray-400 cursor-pointer px-3 py-2 rounded-md text-white">
+                Home
+            </a>
+        </nav>
+    </header>
+    <main class="w-full flex items-center justify-center p-4 mt-5 md:mt-20">
+        <div class="bg-gray-200 shadow-lg rounded-lg p-6 md:p-8 w-[90%] max-w-lg md:max-w-2xl flex flex-col items-center 
+                    transition-all duration-300 transform hover:scale-105 border border-gray-300">
+            <img src="./Assets/ProfilJames.png" alt="Profile Picture"
+                 class="w-32 h-35 md:w-40 md:h-40  border-4 border-gray-300 shadow-md">
+
+            <h2 class="text-2xl font-bold text-gray-800 mt-4">James</h2>
+            <p class="text-gray-600 text-sm">Student ID: 231111512</p>
+            <p class="text-gray-600 text-sm">Year Enrolled: 2022</p>
+
+            <div class="mt-4 flex flex-col items-center gap-2 w-full justify-center">
+                <h3 class="text-lg font-semibold text-gray-700">Studying in</h3>
+                <p class="text-gray-600 text-sm">Mikroskil University</p>
+            </div>
+
+            <div class="mt-4 flex flex-col items-center gap-2 w-full justify-center">
+                <h3 class="text-lg font-semibold text-gray-700">Hobbies:</h3>
+                <p class="text-gray-600 text-sm">Coding, Watching Movies</p>
+            </div>
+
+            <div class="mt-4 w-full text-center">
+                <p class="description text-gray-700 text-sm w-full">
+                    Hi There! I'm a second-year CS major at Mikroskil University. I'm twenty years old.
+                    I can create a website using either HTML, React, Vue, EJS, or Flutter.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

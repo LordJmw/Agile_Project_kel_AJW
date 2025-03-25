@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 w-screen flex flex-col items-center justify-center">
+
+    <header class="w-full">
+        <nav class="w-full bg-green-500 flex justify-between items-center p-4 md:p-6">
+            <p class="text-white text-lg font-bold">AJW Group</p>
+            <p class="active hover:bg-gray-400 cursor-pointer px-3 py-2 rounded-md text-white">Home</p>
+        </nav>
+    </header>
+    
+    <main class="w-full flex-col md:flex-row flex-wrap gap-6 items-center justify-center p-4 mt-4 md:mt-20">
+        <!-- Card Container -->
+        <div class="flex flex-wrap justify-center gap-5" href="">
+            <!-- Card 1 -->
+            <a href="Detail_James.html" class="block">
+                <div class="card p-6 border border-gray-300 rounded-lg shadow-lg bg-white w-80 h-[260px] flex flex-col 
+                hover:scale-105 cursor-pointer hover:border-blue-500 transition-all duration-300 ease-in-out transform">
+                
+                    <div class="grid grid-cols-[auto,1fr] items-center gap-3">
+                        <img class="w-16 h-20 border border-gray-400" src="./Assets/ProfilJames.png" alt="profilePicture">
+                        <div>
+                            <p class="font-bold text-xl text-gray-800">James</p>
+                            <p class="text-gray-600 text-sm">Student ID: 231111512</p>
+                        </div>
+                    </div>
+        
+                    <div class="mt-3 w-full description-container truncated-description flex-grow">
+                        <p class="description text-gray-700 text-sm w-full">
+                            Hi There! I'm a second-year CS major at Mikroskil University. I'm twenty...
+                        </p>
+                        <p class="toggle-desc text-blue-500 cursor-pointer hover:underline text-sm font-medium w-full">
+                            Show More
+                        </p>
+                    </div>
+                </div>
+            </a>        
+    
+            <!-- Ubah jadi profil kalian -->
+            <a href="halamanKalian" class="block">
+                <div class="card p-6 border border-gray-300 rounded-lg shadow-lg bg-white w-80 h-[260px] flex flex-col 
+                hover:scale-105 cursor-pointer hover:border-blue-500 transition-all duration-300 ease-in-out transform">
+                
+                    <div class="grid grid-cols-[auto,1fr] items-center gap-3">
+                        <img class="w-16 h-20 border border-gray-400" src="./Assets/ProfilJames.png" alt="profilePicture">
+                        <div>
+                            <p class="font-bold text-xl text-gray-800">James</p>
+                            <p class="text-gray-600 text-sm">Student ID: 231111512</p>
+                        </div>
+                    </div>
+        
+                    <div class="mt-3 w-full description-container truncated-description flex-grow">
+                        <p class="description text-gray-700 text-sm w-full">
+                            Hi There! I'm a second-year CS major at Mikroskil University. I'm twenty...
+                        </p>
+                        <p class="toggle-desc text-blue-500 cursor-pointer hover:underline text-sm font-medium w-full">
+                            Show More
+                        </p>
+                    </div>
+                </div>
+            </a>        
+        </div>
+    </main>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".active").forEach(el => {
+            if (el.innerHTML.toLowerCase() === window.location.pathname.split("/").pop().split(".")[0]) {
+                el.classList.add("bg-gray-500", "p-2", "rounded-md", "text-white");
+            }
+        });
+    });
+
+    //tambahkan deskripsi lengkap kalian disini
+    const fullDesc = ["Hi There! I'm a second year cs-major student at Mikroskil University. I'm twenty years old. I can create a website using either HTML, react, vue, ejs, or flutter"]
+
+    document.querySelectorAll(".toggle-desc").forEach((el, index) => {
+        el.addEventListener("click", () => {
+            const descContainer = el.closest(".description-container");
+            const descParagraph = descContainer.querySelector(".description");
+
+            if (descContainer.classList.contains("truncated-description")) {
+                descParagraph.textContent = fullDesc[index];
+                descContainer.classList.remove("truncated-description");
+                descContainer.classList.add("full-description");
+                el.textContent = "Show Less";
+            } else {
+                descParagraph.textContent = fullDesc[index].substring(0, 60) + "...";
+                descContainer.classList.remove("full-description");
+                descContainer.classList.add("truncated-description");
+                el.textContent = "Show More";
+            }
+        });
+    });
+</script>
+</html>
