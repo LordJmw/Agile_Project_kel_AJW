@@ -41,16 +41,15 @@
 
                     <button class="rounded-md p-2 bg-green-500"><a href="./Detail_James.html">Detail</a></button>
                 </div>
-
-            <!-- Ubah jadi profil kalian -->
+                
             <div class="card p-6 border border-gray-300 rounded-lg shadow-lg bg-white w-80 h-[260px] flex flex-col 
                 hover:scale-105 cursor-pointer hover:border-blue-500 transition-all duration-300 ease-in-out transform">
                 
                     <div class="grid grid-cols-[auto,1fr] items-center gap-3">
-                        <img class="w-16 h-20 border border-gray-400" src="./Assets/ProfilJames.png" alt="profilePicture">
+                        <img class="w-16 h-20 border border-gray-400" src="./Assets/ProfilAlvin.jpeg" alt="profilePicture">
                         <div>
-                            <p class="font-bold text-xl text-gray-800">James</p>
-                            <p class="text-gray-600 text-sm">Student ID: 231111512</p>
+                            <p class="font-bold text-xl text-gray-800">Alvin</p>
+                            <p class="text-gray-600 text-sm">Student ID: 231113040</p>
                         </div>
                     </div>
         
@@ -65,7 +64,35 @@
 
                     <button class="rounded-md p-2 bg-green-500"><a href=".link kalian">Detail</a></button>
                 </div>
-        </div>
+
+                <!-- Ubah jadi profil kalian -->
+                <div class="card p-6 border border-gray-300 rounded-lg shadow-lg bg-white w-80 h-[260px] flex flex-col 
+                    hover:scale-105 cursor-pointer hover:border-blue-500 transition-all duration-300 ease-in-out transform">
+                    
+                        <div class="grid grid-cols-[auto,1fr] items-center gap-3">
+                            <img class="w-16 h-20 border border-gray-400" src="./Assets/ProfilJames.png" alt="profilePicture">
+                            <div>
+                                <p class="font-bold text-xl text-gray-800">Alvin</p>
+                                <p class="text-gray-600 text-sm">Student ID: 231113040</p>
+                            </div>
+                        </div>
+            
+                        <div class="mt-3 w-full description-container truncated-description flex-grow">
+                            <p class="description text-gray-700 text-sm w-full">
+                                Hi There! I'm a second-year CS major at Mikroskil University. I'm twenty...
+                            </p>
+                            <p class="toggle-desc text-blue-500 cursor-pointer hover:underline text-sm font-medium w-full">
+                                Show More
+                            </p>
+                        </div>
+
+                        <button class="rounded-md p-2 bg-green-500"><a href=".link kalian">Detail</a></button>
+                    </div>
+                </div>
+            </div>
+
+            
+
     </main>
 </body>
 <script>
@@ -78,7 +105,10 @@
     });
 
     //tambahkan deskripsi lengkap kalian disini
-    const fullDesc = ["Hi There! I'm a second year cs-major student at Mikroskil University. I'm twenty years old. I can create a website using either HTML, react, vue, ejs, or flutter"]
+    const fullDesc = [
+        "Hi There! I'm a second year cs-major student at Mikroskil University. I'm twenty years old. I can create a website using either HTML, react, vue, ejs, or flutter",
+        "Hi There! I'm a second year cs-major student at Mikroskil University. I'm twenty years old. I'm focused on learning Backend Web Applications and Machine Learning"
+    ]
 
     document.querySelectorAll(".toggle-desc").forEach((el, index) => {
         el.addEventListener("click", (event) => {
